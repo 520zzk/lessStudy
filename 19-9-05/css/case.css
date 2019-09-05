@@ -1,0 +1,205 @@
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+body {
+  font-size: 0.86666667rem;
+  font-family: '微软雅黑';
+  color: #738797;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #f00;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*引入默认样式*/
+/*公用*/
+.i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+/*头部背景及箭头*/
+.header {
+  height: 2.93333333rem;
+  background: url('../img/bg.png') no-repeat;
+  background-size: 100%;
+}
+.backBtn {
+  width: 2rem;
+  height: 2rem;
+  padding: 14px 0.26666667rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.backBtn i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: url('../img/icon.png') no-repeat 0rem 0rem;
+  background-size: 2rem 26.66666667rem;
+}
+.signOut {
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  padding: 0.46666667rem 0.23333333rem;
+  line-height: 2rem;
+  display: flex;
+}
+.signOut span {
+  align-self: center;
+}
+.signOut i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: url('../img/icon.png') no-repeat 0rem -2rem;
+  background-size: 2rem 26.66666667rem;
+}
+.logo {
+  height: 2.66666667rem;
+  text-align: center;
+}
+.logo img {
+  height: 100%;
+}
+.info {
+  height: 12.5rem;
+  background: url('../img/ingoBg.png') no-repeat;
+  background-size: 100%;
+  padding-top: 2.1rem;
+  text-align: center;
+}
+.infoImg {
+  width: 6rem;
+  height: 6rem;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.13333333rem;
+}
+.infoImg img {
+  width: 100%;
+}
+.userName {
+  height: 1.93333333rem;
+}
+.userName span {
+  display: inline-block;
+  line-height: 1.93333333rem;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.title {
+  height: 3.33333333rem;
+  line-height: 3.33333333rem;
+  font-size: 1.06666667rem;
+  background-color: #fbfcff;
+  padding-left: 1.66666667rem;
+  color: #9ca9b4;
+  font-weight: normal;
+}
+.menu {
+  height: 12.46666667rem;
+  padding: 0.06666667rem;
+  background-color: #e5ebf0;
+  display: grid;
+  grid-template-rows: repeat(2, 6.2rem);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.06666667rem;
+}
+.menu .item {
+  background: #fff;
+  text-align: center;
+}
+.menu .item i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background: #033333;
+  margin-top: 1.33333333rem;
+}
+.menu .item .itemImg01 {
+  background: url('../img/icon.png') no-repeat 0rem -4rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg02 {
+  background: url('../img/icon.png') no-repeat 0rem -6rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg03 {
+  background: url('../img/icon.png') no-repeat 0rem -8rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg04 {
+  background: url('../img/icon.png') no-repeat 0rem -10rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg05 {
+  background: url('../img/icon.png') no-repeat 0rem -12rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg06 {
+  background: url('../img/icon.png') no-repeat 0rem -14rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg07 {
+  background: url('../img/icon.png') no-repeat 0rem -16rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item .itemImg08 {
+  background: url('../img/icon.png') no-repeat 0rem -18rem;
+  background-size: 2rem 26.66666667rem;
+}
+.menu .item span {
+  display: inline-block;
+  line-height: 1.9rem;
+  width: 100%;
+}
+.safe {
+  height: 6.2rem;
+  padding: 0.06666667rem 0;
+  background-color: #e5ebf0;
+  display: flex;
+}
+.safe .item {
+  height: 6.2rem;
+  flex: 1;
+  background: #fff;
+  text-align: center;
+}
+.safe i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  margin-top: 1.33333333rem;
+}
+.safe i.password {
+  background: url('../img/icon.png') no-repeat 0rem -20rem;
+  background-size: 2rem 26.66666667rem;
+}
+.safe i.email {
+  background: url('../img/icon.png') no-repeat 0rem -22rem;
+  background-size: 2rem 26.66666667rem;
+}
+.safe span {
+  display: inline-block;
+  line-height: 1.9rem;
+  width: 100%;
+}

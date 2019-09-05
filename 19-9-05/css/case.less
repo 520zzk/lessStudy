@@ -1,0 +1,170 @@
+@import "globe.less";
+/*引入默认样式*/
+/*公用*/
+.i{
+  width:60/@rem;
+  height:60/@rem;
+  display:inline-block;
+}
+.backImg(@x:0,@y:0){
+  background:url('../img/icon.png') no-repeat @x/@rem @y/@rem;
+  background-size: 60/@rem 800/@rem;
+}
+/*头部背景及箭头*/
+.header{
+  height:88/@rem;
+  background: url('../img/bg.png') no-repeat;
+  background-size:100%;
+}
+.backBtn{
+  width:60/@rem;
+  height:60/@rem;
+  padding:14px 8/@rem;
+  position: absolute;
+  top:0;
+  left:0;
+  i{
+    .i;
+   .backImg();
+  }
+}
+//头部退出
+.signOut{
+  height:60/@rem;
+  position:absolute;
+  right:0;
+  top:0;
+  color:#fff;
+  padding:14/@rem 7/@rem;
+  line-height:60/@rem;
+  display: flex;
+  span{
+    align-self: center;
+  }
+  i{
+    .i;
+    .backImg(0,-60);
+  }
+}
+//头部logo
+.logo{
+  height:80/@rem;
+  text-align: center;
+  img{
+    height:100%;
+  }
+}
+//个人信息
+.info{
+  height:375/@rem;
+  background: url('../img/ingoBg.png') no-repeat;
+  background-size:100%;
+  padding-top:63/@rem;
+  text-align:center;
+}
+.infoImg{
+  width:180/@rem;
+  height:180/@rem;
+  border:3/@rem solid #fff;
+  border-radius:50%;
+  overflow:hidden;
+  margin:0 auto 34/@rem;
+  img{
+    width:100%;
+  }
+}
+.userName{
+  height:58/@rem;
+  span{
+    display: inline-block;
+    line-height:58/@rem;
+    vertical-align:middle;
+    font-size:36/@rem;
+    color:#fff;
+  }
+}
+//个人资料
+.title{
+  height:100/@rem;
+  line-height:100/@rem;
+  font-size:32/@rem;
+  background-color:#fbfcff;
+  padding-left:50/@rem;
+  color:#9ca9b4;
+  font-weight:normal;
+}
+.menu{
+  height:374/@rem;
+  padding:2/@rem;
+  background-color:#e5ebf0;
+  display:grid;
+  grid-template-rows: repeat(2,186/@rem);
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2/@rem;
+  .item{
+    background:#fff;
+    text-align: center;
+    i{
+      .i;
+      background:#033333;
+      margin-top:40/@rem;
+    }
+    & .itemImg01{
+      .backImg(0,-120);
+    }
+    & .itemImg02{
+      .backImg(0,-180);
+    }
+    & .itemImg03{
+      .backImg(0,-240);
+    }
+    & .itemImg04{
+      .backImg(0,-300);
+    }
+    & .itemImg05{
+      .backImg(0,-360);
+    }
+    & .itemImg06{
+      .backImg(0,-420);
+    }
+    & .itemImg07{
+      .backImg(0,-480);
+    }
+    & .itemImg08{
+      .backImg(0,-540);
+    }
+    span{
+      display: inline-block;
+      line-height:57/@rem;
+      width:100%;
+    }
+  }
+}
+//安全设置
+.safe{
+  height:186/@rem;
+  padding:2/@rem 0;
+  background-color:#e5ebf0;
+  display: flex;
+  .item{
+    height:186/@rem;
+    flex:1;
+    background:#fff;
+    text-align:center;
+  }
+  i{
+    .i;
+    margin-top:40/@rem;
+    &.password{
+      .backImg(0,-600);
+    }
+    &.email{
+      .backImg(0,-660);
+    }
+  }
+  span{
+    display: inline-block;
+    line-height:57/@rem;
+    width:100%;
+  }
+}

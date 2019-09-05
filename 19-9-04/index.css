@@ -1,0 +1,140 @@
+.size {
+  width: 300px;
+  height: 200px;
+}
+.box1 {
+  background: #000;
+  width: 300px;
+  height: 200px;
+}
+/*
+@width:'width:10px'
+
+.box1{
+    @width;   //不可以会报错
+}
+
+*/
+.border {
+  border: 2px solid pink;
+}
+.spanAfter {
+  color: red;
+}
+.spanAfter:after {
+  /*&----spanAfter*/
+  content: '哈哈哈';
+  margin-left: 30px ;
+}
+.box2 {
+  width: 300px;
+  height: 200px;
+  border: 2px solid pink;
+  border: 3px solid red;
+}
+.box3 {
+  width: 300px;
+  height: 200px;
+  color: red;
+}
+.box3:after {
+  /*&----spanAfter*/
+  content: '哈哈哈';
+  margin-left: 30px ;
+}
+.one {
+  width: 300px;
+  height: 200px;
+  border: 1px solid green;
+  border: green solid red;
+}
+.two {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #542150;
+  border: #542150 solid red;
+}
+.three {
+  width: 300px;
+  height: 200px;
+  border: 1px solid pink;
+  border: pink solid red;
+}
+.one- {
+  background: #000;
+  border: 3px solid green;
+  /*
+        有几个参数就得传多少个    
+    */
+  width: 300px;
+  height: 200px;
+}
+.two- {
+  width: 300px;
+  height: 200px;
+  background: pink;
+  border: 6px solid #000;
+}
+.aaa {
+  width: 300px;
+  height: 200px;
+  border: 2px solid pink;
+  border: 3px solid red;
+}
+.bbb {
+  width: 300px;
+  height: 200px;
+  border: 1px solid 5px;
+  border: 5px solid red;
+  /*
+        border中如果只改变后面参数的值，前面的参数也得写上去
+        如果顺序改变，按顺序依次写就可以，不用全部
+    */
+}
+/*
+
+    .border(@width:3px,@style:solid){
+        border:@augments red;
+
+    }
+    @augments 参数适合属性无序的
+*/
+.onem {
+  width: 300px;
+  height: 200px;
+  border-right: 5px solid #212121;
+  background: green;
+}
+.twom {
+  width: 300px;
+  height: 200px;
+  border-left: 10px solid #212121;
+  background: green;
+}
+.threem {
+  width: 300px;
+  height: 200px;
+}
+/*
+ Math函数 
+ round(5.5)   四舍五入
+ ceil(2.3)  向上取整3
+ floor(2.6) 向下取整2
+*/
+.blue .button {
+  background: blue;
+}
+.red .button {
+  background: red;
+}
+.box {
+  background: red;
+  /*
+    这种的好处是，可以只改变一点，就可以改变很多
+    */
+}
+/*
+注释
+    // 这种注释不会被解析
+    /** / 这种注释会被解析
+*/

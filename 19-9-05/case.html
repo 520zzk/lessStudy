@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <script>
+        var pixRatio = 1/window.devicePixelRatio;
+        var html = document.documentElement;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale='+ pixRatio +',minimum-scale='+ pixRatio +',maximum-scale='+ pixRatio +'">');
+        html.style.fontSize = html.clientWidth/25 + 'px';
+    </script>
+    <link href="css/case.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="backBtn"><i></i> </div>
+    <h1 class="logo"><img src="./img/logo.png" alt=""></h1>
+    <div class="signOut"><span>退出</span><i></i></div>
+</header>
+<section class="info">
+    <div class="infoImg"><img src="./img/1.jpg" alt=""></div>
+    <p class="userName"><span>我是程序员</span><img src="./img/member.png" alt=""></p>
+    <p class="regTime">注册时间：2019-09-05</p>
+</section>
+<h3 class="title">个人资料</h3>
+<section class="menu">
+   <a href="#" class="item">
+       <i class="itemImg01">&nbsp;</i>
+       <span>基本信息</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg02">&nbsp;</i>
+        <span>个人信息</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg03">&nbsp;</i>
+        <span>VIP信息</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg04">&nbsp;</i>
+        <span>我的订单</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg05">&nbsp;</i>
+        <span>视频记录</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg06">&nbsp;</i>
+        <span>视频设备</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg07">&nbsp;</i>
+        <span>绑定账号</span>
+   </a>
+   <a href="#" class="item">
+        <i class="itemImg08">&nbsp;</i>
+   </a>
+</section>
+<h3 class="title">安全设置</h3>
+<section class="safe">
+    <a href="#" class="item">
+        <i class="password">&nbsp;</i>
+        <span>修改密码</span>
+    </a>
+    <a href="#" class="item">
+        <i class="email">&nbsp;</i>
+        <span>邮箱设置</span>
+    </a>
+</section>
+</body>
+</html>

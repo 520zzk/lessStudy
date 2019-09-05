@@ -1,0 +1,161 @@
+
+@red:red; //变量
+
+// @improt ''  引用外部less ， 变量也可以用
+.size{  //公用
+    width:300px;
+    height:200px;
+}
+.box1{
+    background: #000;
+    .size;  //不支持变量单独写，但是可以这样继承样式
+}
+
+/*
+@width:'width:10px'
+
+.box1{
+    @width;   //不可以会报错
+}
+
+*/
+
+//混合
+.border{
+    border:2px solid pink;
+}
+.spanAfter{
+    color:red;
+    &:after{    
+        /*&----spanAfter*/
+        content:'哈哈哈';
+        margin-left:30px ;
+    }
+}
+.box2{
+    .size;
+    .border;    
+}
+.box3{
+    .size;
+    .spanAfter;
+}
+
+//带参数的混合
+.border(@color){
+    border:1px solid @color;
+}
+.one{
+    .size;
+    .border(green);
+}
+.two{
+    .size;
+    .border(#542150);
+}
+.three{
+    .size;
+    .border(pink);
+}
+//多个参数的混合
+.change(@color,@value,@color2){
+    background:@color;
+    border:@value solid @color2;    
+}
+.one-{ 
+    .change(#000,3px,green);
+    /*
+        有几个参数就得传多少个    
+    */
+    .size;
+}
+.two-{
+    .size;
+    .change(pink,6px,#000);
+}
+//带默认参数的样式
+.border(@width:3px,@style:solid){
+    border:@width @style red;
+}
+.aaa{
+    .size;
+    .border();
+}
+.bbb{
+    .size;
+    .border(5px)
+    /*
+        border中如果只改变后面参数的值，前面的参数也得写上去
+        如果顺序改变，按顺序依次写就可以，不用全部
+    */
+}
+    //augmengs参数变量
+/*
+
+    .border(@width:3px,@style:solid){
+        border:@augments red;
+
+    }
+    @augments 参数适合属性无序的
+*/
+
+//模式匹配
+.borderM(right,@width:1px){
+    border-right:@width solid #212121;
+}
+.borderM(left,@width:1px){
+    border-left:@width solid #212121;
+}
+    //第一个参数用来匹配选择
+
+    //设置一个默认的borderM
+.borderM(@_,@width:1px){
+    background:green;
+}
+.onem{
+    .size;
+    .borderM(right,5px)
+}
+.twom{
+    .size;
+    .borderM(left,10px)
+}
+.threem{
+    .size;
+    // .borderM() 设置了默认的borderM,不传值也是会报错的
+}
+
+
+//其他
+/*
+ Math函数 
+ round(5.5)   四舍五入
+ ceil(2.3)  向上取整3
+ floor(2.6) 向下取整2
+*/ 
+//命名空间
+
+.blue{
+    .button{
+        background: blue;
+    }
+}
+.red{
+    .button{
+        background:red;
+    }
+}
+.box{
+    .red > .button;
+    /*
+    这种的好处是，可以只改变一点，就可以改变很多
+    */
+}
+
+/*
+注释
+    // 这种注释不会被解析
+    /** / 这种注释会被解析
+*/
+
+// ~ 避免编译   +-*/像这种 前面加上~可以避免编译
